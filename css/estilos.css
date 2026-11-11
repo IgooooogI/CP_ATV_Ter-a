@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+header {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 5px;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    background-color: #dddddd;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    padding: 8px;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #cccccc;
+    text-decoration: underline;
+}
+
+main {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+.foto {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.destaque {
+    background-color: #eeeeee;
+    border-left: 4px solid #777777;
+    padding: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #999999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+form {
+    max-width: 600px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 7px;
+    border: 1px solid #999999;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+fieldset label {
+    display: block;
+    margin: 6px 0;
+}
+
+button {
+    padding: 7px 14px;
+    margin: 5px 5px 0 0;
+    font: inherit;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid #999999;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid #999999;
+}
+
+svg rect {
+    fill: #cccccc;
+}
+
+svg circle {
+    fill: #999999;
+}
+
+svg polygon {
+    fill: #666666;
+}
+
+video,
+audio,
+iframe,
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+video,
+iframe {
+    width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #cccccc;
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        flex: 0 1 auto;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    fieldset label {
+        display: inline-block;
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 700px) {
+    .pagina-inicio main {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(220px, 1fr);
+        gap: 25px;
+    }
+
+    .pagina-inicio section,
+    .pagina-curriculo section {
+        margin-bottom: 0;
+    }
+
+    .pagina-curriculo main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .pagina-curriculo section:nth-child(3),
+    .pagina-curriculo section:nth-child(4) {
+        grid-column: span 2;
+    }
+
+    .pagina-formulario main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagina-multimidia main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .pagina-multimidia section:last-child {
+        grid-column: span 2;
+    }
+
+    .pagina-graficos main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (min-width: 900px) {
+    .pagina-curriculo main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pagina-curriculo section:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .pagina-curriculo section:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .pagina-multimidia main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pagina-multimidia section:last-child {
+        grid-column: span 1;
+    }
+}
+
+/* ===== CP3: interatividade ===== */
+.topo-acoes {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+#alternar-tema {
+    margin: 0;
+    cursor: pointer;
+}
+
+.erro {
+    display: block;
+    color: #b00020;
+    font-size: 14px;
+    min-height: 0;
+}
+
+.erro:empty {
+    display: none;
+}
+
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border: 2px solid #b00020;
+}
+
+input.valido,
+select.valido,
+textarea.valido {
+    border: 2px solid #2e7d32;
+}
+
+.contador {
+    display: block;
+    font-size: 13px;
+    color: #666666;
+}
+
+.feedback {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-left: 4px solid #777777;
+    background-color: #eeeeee;
+}
+
+.feedback.sucesso {
+    border-left-color: #2e7d32;
+    background-color: #e6f4e7;
+    color: #1b4d1e;
+}
+
+.feedback.erro-geral {
+    border-left-color: #b00020;
+    background-color: #fbe9ec;
+    color: #7a0016;
+}
+
+.nota {
+    font-size: 14px;
+    color: #666666;
+}
+
+.mensagens {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.mensagens li {
+    border: 1px solid #cccccc;
+    border-left: 4px solid #777777;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.mensagens .meta {
+    font-size: 13px;
+    color: #666666;
+    margin: 0 0 4px;
+}
+
+.mensagens .texto {
+    margin: 4px 0 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.mensagens button {
+    margin: 0;
+}
+
+/* Tema escuro */
+body.tema-escuro {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+body.tema-escuro header,
+body.tema-escuro main {
+    background-color: #252525;
+    border-color: #444444;
+}
+
+body.tema-escuro nav {
+    background-color: #333333;
+}
+
+body.tema-escuro nav a {
+    color: #e6e6e6;
+}
+
+body.tema-escuro nav a:hover,
+body.tema-escuro nav a:focus {
+    background-color: #4a4a4a;
+}
+
+body.tema-escuro h2,
+body.tema-escuro footer {
+    border-color: #444444;
+}
+
+body.tema-escuro .destaque {
+    background-color: #333333;
+    border-left-color: #aaaaaa;
+}
+
+body.tema-escuro th {
+    background-color: #3a3a3a;
+}
+
+body.tema-escuro th,
+body.tema-escuro td {
+    border-color: #666666;
+}
+
+body.tema-escuro input[type="text"],
+body.tema-escuro input[type="email"],
+body.tema-escuro input[type="tel"],
+body.tema-escuro input[type="date"],
+body.tema-escuro select,
+body.tema-escuro textarea {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    border-color: #777777;
+}
+
+body.tema-escuro .erro {
+    color: #ff8a9b;
+}
+
+body.tema-escuro .feedback {
+    background-color: #333333;
+}
+
+body.tema-escuro .feedback.sucesso {
+    background-color: #1c3a1f;
+    color: #b8e6bb;
+}
+
+body.tema-escuro .feedback.erro-geral {
+    background-color: #4a1620;
+    color: #ffc2cc;
+}
+
+body.tema-escuro .mensagens li {
+    background-color: #1f1f1f;
+    border-color: #444444;
+}
+
+body.tema-escuro .nota,
+body.tema-escuro .contador,
+body.tema-escuro .mensagens .meta {
+    color: #aaaaaa;
+}
+
+body.tema-escuro canvas,
+body.tema-escuro svg {
+    border-color: #777777;
+}
+
+@media (min-width: 700px) {
+    .pagina-formulario main {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: 25px;
+        justify-content: stretch;
+    }
+
+    .pagina-formulario section {
+        margin-bottom: 0;
+    }
+}

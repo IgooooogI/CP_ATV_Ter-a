@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário | Igor Pedrosa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina-formulario">
+    <header>
+        <h1>Formulário</h1>
+        <p>Entre em contato comigo.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="multimidia.html">Multimídia</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Fale comigo</h2>
+
+            <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+
+            <form id="form-contato" action="#" method="post" novalidate>
+                <p>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" autocomplete="name">
+                    <span class="erro" id="erro-nome"></span>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                    <span class="erro" id="erro-email"></span>
+                </p>
+
+                <p>
+                    <label for="telefone">Telefone (opcional):</label><br>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234-5678" autocomplete="tel">
+                    <span class="erro" id="erro-telefone"></span>
+                </p>
+
+                <p>
+                    <label for="data">Data:</label><br>
+                    <input type="date" id="data" name="data">
+                </p>
+
+                <p>
+                    <label for="assunto">Assunto:</label><br>
+                    <input type="text" id="assunto" name="assunto">
+                    <span class="erro" id="erro-assunto"></span>
+                </p>
+
+                <p>
+                    <label for="categoria">Categoria:</label><br>
+                    <select id="categoria" name="categoria">
+                        <option value="">Selecione</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="projeto">Projeto</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <span class="erro" id="erro-categoria"></span>
+                </p>
+
+                <fieldset>
+                    <legend>Tipo de contato:</legend>
+                    <label><input type="radio" name="tipo" value="academico"> Acadêmico</label>
+                    <label><input type="radio" name="tipo" value="profissional"> Profissional</label>
+                    <label><input type="radio" name="tipo" value="outro"> Outro</label>
+                    <span class="erro" id="erro-tipo"></span>
+                </fieldset>
+
+                <p>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="6"></textarea>
+                    <span class="contador" id="contador-mensagem">0 / 500</span>
+                    <span class="erro" id="erro-mensagem"></span>
+                </p>
+
+                <p>
+                    <label>
+                        <input type="checkbox" id="aceite" name="aceite">
+                        Aceito enviar o formulário.
+                    </label>
+                    <span class="erro" id="erro-aceite"></span>
+                </p>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mensagens enviadas</h2>
+            <p class="nota">Ficam salvas apenas neste navegador (localStorage) e continuam aqui depois de recarregar a página.</p>
+            <ul id="lista-mensagens" class="mensagens"></ul>
+            <p id="sem-mensagens" class="nota">Nenhuma mensagem enviada ainda.</p>
+            <button type="button" id="limpar-mensagens" hidden>Apagar todas</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Igor Pedrosa - 2026</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

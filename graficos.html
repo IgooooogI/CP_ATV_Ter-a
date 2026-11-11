@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos | Igor Pedrosa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina-graficos">
+    <header>
+        <h1>Gráficos</h1>
+        <p>Canvas e SVG.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="multimidia.html">Multimídia</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Canvas</h2>
+            <canvas id="desenho" width="500" height="250">
+                Seu navegador não suporta Canvas.
+            </canvas>
+        </section>
+
+        <section>
+            <h2>SVG</h2>
+            <svg viewBox="0 0 500 250" role="img" aria-label="Retângulo, círculo e triângulo">
+                <title>Formas geométricas</title>
+                <rect x="30" y="40" width="130" height="80"></rect>
+                <circle cx="270" cy="80" r="45"></circle>
+                <polygon points="370,150 440,40 490,150"></polygon>
+            </svg>
+        </section>
+    </main>
+
+    <footer>
+        <p>Igor Pedrosa - 2026</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
