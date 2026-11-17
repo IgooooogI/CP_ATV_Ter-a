@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimídia | Igor Pedrosa</title>
+    <meta name="description" content="Portfólio pessoal de Igor Pedrosa, com currículo, projetos, multimídia e contato.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body class="pagina-multimidia">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <h1>Multimídias</h1>
         <p>Alguns exemplos de vídeos que editei.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="curriculo.html">Currículo</a></li>
-            <li><a href="formulario.html">Formulário</a></li>
-            <li><a href="multimidia.html">Multimídia</a></li>
-            <li><a href="graficos.html">Gráficos</a></li>
+    <nav aria-label="Navegação principal">
+        <ul class="nav nav-pills justify-content-center flex-wrap">
+            <li><a class="nav-link" href="index.html">Início</a></li>
+            <li><a class="nav-link" href="curriculo.html">Currículo</a></li>
+            <li><a class="nav-link" href="formulario.html">Formulário</a></li>
+            <li><a class="nav-link" href="multimidia.html" aria-current="page">Multimídia</a></li>
+            <li><a class="nav-link" href="graficos.html">Gráficos</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main id="conteudo" class="container">
         <section>
             <h2>Vídeo</h2>
-            <video controls width="500">
+            <video controls preload="metadata" width="500" aria-label="Vídeo de edição">
                 <source src="midias/video.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
             </video>
@@ -33,7 +36,7 @@
 
         <section>
             <h2>Áudio</h2>
-            <audio controls>
+            <audio controls preload="metadata" aria-label="Áudio de demonstração">
                 <source src="midias/audio.mp3" type="audio/mpeg">
                 Seu navegador não suporta áudio.
             </audio>
@@ -41,13 +44,14 @@
 
         <section>
             <h2>Iframe</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0e3GPea1Tyg" title="Vídeo incorporado do YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0e3GPea1Tyg" title="Vídeo incorporado do YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
     </main>
 
     <footer>
         <p>Igor Pedrosa - 2026</p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/scripts.js" defer></script>
 </body>
 </html>

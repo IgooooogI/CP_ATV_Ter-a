@@ -47,7 +47,9 @@
         acoes.className = "topo-acoes";
         var botao = document.createElement("button");
         botao.type = "button";
+        botao.className = "btn btn-outline-secondary btn-sm";
         botao.id = "alternar-tema";
+        botao.setAttribute("aria-label", "Alternar entre tema claro e escuro");
         acoes.appendChild(botao);
         header.insertBefore(acoes, header.firstChild);
 
@@ -170,6 +172,8 @@
 
             var remover = document.createElement("button");
             remover.type = "button";
+            remover.className = "btn btn-sm btn-outline-danger";
+            remover.setAttribute("aria-label", "Remover mensagem de " + m.nome);
             remover.textContent = "Remover";
             remover.addEventListener("click", function () {
                 gravar(CHAVE_MENSAGENS, ler(CHAVE_MENSAGENS, []).filter(function (x) { return x.id !== m.id; }));
